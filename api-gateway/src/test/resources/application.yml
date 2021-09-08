@@ -1,0 +1,29 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: account-management-route
+          uri: lb://ACCOUNT-MANAGEMENT-SERVICE
+          predicates:
+            - Path=/api/v1/users/reset
+            - Method=GET
+          filters:
+            - RewritePath=/api/v1/users, /users
+        - id: users-route
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/api/v1/users, /api/v1/users/{*}
+            - Method=GET,POST,DELETE
+          filters:
+            - RewritePath=/api/v1/users, /users
+eureka:
+  client:
+    enabled: false
+
+
+
+

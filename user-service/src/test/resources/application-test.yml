@@ -1,0 +1,14 @@
+eureka:
+  client:
+    register-with-eureka: false
+    enabled: false
+gateway:
+  ip: 127.0.0.1
+
+token:
+  expiration_time: 300000
+  secret: cisco
+
+security:
+  basic:
+    enabled: false
