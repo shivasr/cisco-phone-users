@@ -14,11 +14,7 @@ to the URL with the pattern /api/v1/users to user-service by rewriting the URLs 
 3. Discovery service which manages the IP addresses and availability of the microservices
 
 
-|--------------         |----------------------|        |-------------------
-|             |         |                      |        |                  |
-| API Gateway |-------->|  Discovery Service   |  ----->| User Service     |
-|             |         |                      |        |                  |
-|--------------         |-----------------------        |--------------------
+![](/Users/c_sramannavar/personal/cisco-phone-users/docs/CiscoPhoneUserServices.jpg)
 
 
 # How to start the application
@@ -151,3 +147,21 @@ Sample Response:
     "preferredPhoneNumber": "+919980697299"
 }
 ```
+# Status Codes and Error Messages
+## Creation of user
+Status Code   | Remarks
+------------- | -------------
+201  | User is created
+200  | When user is updated or created
+404  | When any operation for any non-existing user is requested
+500  | Any internal server error
+503  | When service is not available
+
+## Creation of phone
+Status Code   | Remarks
+------------- | -------------
+201  | Phone with the given details is created
+200  | When phone records are updated or created
+404  | When any operation for any non-existing record is requested
+500  | Any internal server error
+503  | When service is not available
