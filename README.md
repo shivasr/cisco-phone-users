@@ -14,7 +14,7 @@ to the URL with the pattern /api/v1/users to user-service by rewriting the URLs 
 3. Discovery service which manages the IP addresses and availability of the microservices
 
 
-![](/Users/c_sramannavar/personal/cisco-phone-users/docs/CiscoPhoneUserServices.jpg)
+![](docs/CiscoPhoneUserServices.jpg)
 
 
 # How to start the application
